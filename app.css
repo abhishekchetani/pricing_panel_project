@@ -1,3 +1,4 @@
+/* Reset CSS for Resetting Different Browsers' Formatting */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -46,7 +47,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+/* Reset CSS Over */
 
 html {
     box-sizing: border-box;
@@ -55,37 +56,40 @@ html {
 
 body {
     background-color: #60a9ff;
-    display: flex;
+    display: flex;                              /* Body Container for Plans' Table Alignment */
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
+/* Setting Initial CSS for Mobile/Tablet Devices Layout */
 .pricing-panel {
     background-color: white;
     border-radius: 10px;
     padding: 15px 25px;
     width: 100%;
     max-width: 960px;
-    display: flex;
-    flex-direction: column;
+    display: flex;                              /* Flexbox for Aligning Plans Properly */
+    flex-direction: column;                     /* Column Layout for Smaller Devices */
     text-align: center;
     text-transform: uppercase;
 }
 
 .pricing-plan {
-    border-bottom: 1px solid #e1f1ff;
+    border-bottom: 1px solid #e1f1ff;           /* Bottom Border for Vertical Layout */
 }
 
 .pricing-plan:last-child {
-    border-bottom: none;
+    border-bottom: none;                        /* No Border for Last Plan */
 }
 
+/* Image Margin & Width */
 .pricing-img {
     margin-bottom: 25px;
     max-width: 100%;
 }
 
+/* Header Formatting */
 .pricing-header {
     /* font-size: 2rem; */
     color: #888;
@@ -104,7 +108,7 @@ body {
     font-size: 12px;
     line-height: 1.5;
     padding: 15px 0;
-    border-top: 1px solid #e1f1ff;
+    border-top: 1px solid #e1f1ff;              /* Border Separator b/w Plan Description Points */
 }
 
 .plan-features-item:last-child {
@@ -114,10 +118,11 @@ body {
 .plan-price {
     color: #016ff9;
     font-weight: 700;
-    display: block;
+    display: block;                             /* Block Display for Span Element */
     font-size: 32px;
 }
 
+/* Sign-up Button Formatting */
 .plan-button {
     border: 1px solid #9dd1ff;
     border-radius: 10px;
@@ -133,6 +138,7 @@ body {
     background-color: #e1f1ff;
 }
 
+/* Different Style for Featured Plan Button */
 .plan-button.is-featured {
     background-color: #48aaff;
     color: white;
@@ -143,10 +149,12 @@ body {
     background-color: #269aff;
 }
 
+/* Responsive Design for Desktops/Laptops */
 @media (min-width: 900px) {
     .pricing-panel {
-        flex-direction: row;
+        flex-direction: row;                    /* Row Alignment in Flexbox for all Plans */
     }
+    /* Removing Bottom Border & Adding Right Border as Separator for Plans */
     .pricing-plan {
         border-bottom: none;
         border-right: 1px solid #e1f1ff;
