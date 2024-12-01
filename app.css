@@ -4,49 +4,137 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
+
 /* Reset CSS Over */
 
 html {
@@ -56,7 +144,8 @@ html {
 
 body {
     background-color: #60a9ff;
-    display: flex;                              /* Body Container for Plans' Table Alignment */
+    display: flex;
+    /* Body Container for Plans' Table Alignment */
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -69,18 +158,22 @@ body {
     padding: 15px 25px;
     width: 100%;
     max-width: 960px;
-    display: flex;                              /* Flexbox for Aligning Plans Properly */
-    flex-direction: column;                     /* Column Layout for Smaller Devices */
+    display: flex;
+    /* Flexbox for Aligning Plans Properly */
+    flex-direction: column;
+    /* Column Layout for Smaller Devices */
     text-align: center;
     text-transform: uppercase;
 }
 
 .pricing-plan {
-    border-bottom: 1px solid #e1f1ff;           /* Bottom Border for Vertical Layout */
+    border-bottom: 1px solid #e1f1ff;
+    /* Bottom Border for Vertical Layout */
 }
 
 .pricing-plan:last-child {
-    border-bottom: none;                        /* No Border for Last Plan */
+    border-bottom: none;
+    /* No Border for Last Plan */
 }
 
 /* Image Margin & Width */
@@ -108,7 +201,8 @@ body {
     font-size: 12px;
     line-height: 1.5;
     padding: 15px 0;
-    border-top: 1px solid #e1f1ff;              /* Border Separator b/w Plan Description Points */
+    border-top: 1px solid #e1f1ff;
+    /* Border Separator b/w Plan Description Points */
 }
 
 .plan-features-item:last-child {
@@ -118,7 +212,8 @@ body {
 .plan-price {
     color: #016ff9;
     font-weight: 700;
-    display: block;                             /* Block Display for Span Element */
+    display: block;
+    /* Block Display for Span Element */
     font-size: 32px;
 }
 
@@ -134,7 +229,8 @@ body {
     transition: background-color 200ms ease-in-out;
 }
 
-.plan-button:hover, .plan-button:focus {
+.plan-button:hover,
+.plan-button:focus {
     background-color: #e1f1ff;
 }
 
@@ -145,21 +241,25 @@ body {
     transition: background-color 200ms ease-in-out;
 }
 
-.plan-button.is-featured:hover, .plan-button.is-featured:focus {
+.plan-button.is-featured:hover,
+.plan-button.is-featured:focus {
     background-color: #269aff;
 }
 
 /* Responsive Design for Desktops/Laptops */
 @media (min-width: 900px) {
     .pricing-panel {
-        flex-direction: row;                    /* Row Alignment in Flexbox for all Plans */
+        flex-direction: row;
+        /* Row Alignment in Flexbox for all Plans */
     }
+
     /* Removing Bottom Border & Adding Right Border as Separator for Plans */
     .pricing-plan {
         border-bottom: none;
         border-right: 1px solid #e1f1ff;
         padding: 25px 50px;
     }
+
     .pricing-plan:last-child {
         border-right: none;
     }
